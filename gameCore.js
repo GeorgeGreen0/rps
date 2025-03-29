@@ -3,6 +3,9 @@ console.log("Let The Game Begin")
 
 const range = 3;
 
+let computerScore = 0;
+let humanScore = 0;
+
 function computerChoice() {
 
     let computerRandom = Math.floor(Math.random() * range);
@@ -23,16 +26,25 @@ function computerChoice() {
 console.log(computerChoice());
 
 function humanChoice() {
-    let playerRandom = prompt("Please enter 0 for Rock, 1 for Paper, or 2 for Scissors:");
 
     let playerChoice;
 
-    if (playerRandom == 0) {
-        playerChoice = "Rock";
-    } else if (playerRandom == 1) {
-        playerChoice = "Paper";
+    let playerRandom = prompt("Please enter your choice: Rock, Paper or Scissors:");
+
+    if (playerRandom !== null) {
+        playerInput = playerRandom.toLowerCase();
+
+        if (playerInput == "rock") {
+            playerChoice = "Rock";
+        } else if (playerInput == "paper") {
+            playerChoice = "Paper";
+        } else if (playerInput == "scissors") {
+            playerChoice = "Scissors";
+        } else {
+            playerChoice = "What the heck is that? Please speak English. =P ";
+        }
     } else {
-        playerChoice = "Scissors";
+        console.log("User cancelled the prompt.");
     }
 
     return playerChoice;
