@@ -7,19 +7,36 @@ function computerChoice() {
 
     let computerRandom = Math.floor(Math.random() * range);
 
-    let computerChoice;
+    let theChoice;
 
     if (computerRandom == 0) {
-        computerChoice = "Rock";
-    } else if (computerChoice == 1) {
-        computerChoice = "Paper";
+        theChoice = "Rock";
+    } else if (computerRandom == 1) {
+        theChoice = "Paper";
     } else {
-        computerChoice = "Scissors";  
-    } 
+        theChoice = "Scissors";  
+    }
+
+    return theChoice;
 }
 
 console.log(computerChoice());
 
 function humanChoice() {
-    
+    let playerRandom = prompt("Please enter 0 for Rock, 1 for Paper, or 2 for Scissors:");
+
+    let playerChoice;
+
+    if (playerRandom == 0) {
+        playerChoice = "Rock";
+    } else if (playerRandom == 1) {
+        playerChoice = "Paper";
+    } else {
+        playerChoice = "Scissors";
+    }
+
+    return playerChoice;
 }
+
+console.log(humanChoice());
+
