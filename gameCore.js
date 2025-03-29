@@ -52,3 +52,23 @@ function humanChoice() {
 
 console.log(humanChoice());
 
+function playRound(computerChoice, humanChoice) {
+
+    if (computerChoice == humanChoice) {
+        console.log("Tie");
+    } else if (computerChoice == "Rock" && humanChoice == "Scissors") {
+        console.log("You win!");
+        humanScore += 1;
+    } else if (computerChoice == "Paper" && humanChoice == "Rock") {
+        console.log("You win!");
+        humanScore += 1;
+    } else if (computerChoice == "Scissors" && humanChoice == "Paper") {
+        console.log("You win!");
+        humanScore += 1;
+    } else {
+        console.log("You lose!");
+        computerScore += 1;
+    }
+}
+
+console.log(humanScore, computerScore);
