@@ -54,7 +54,7 @@ function playGame() {
                let humanResult = humanChoice();
 
                 if (computerResult == humanResult) {
-                    console.log("Tie");
+                    console.log(`It's a tie! You guys chose the same.`);
                     ties ++;
                 } else if (
                     (computerResult == "rock" && humanResult == "scissors")|| 
@@ -62,10 +62,10 @@ function playGame() {
                     (computerResult == "scissors" && humanResult == "paper")
                 )
                 {
-                    console.log("Termi wins!");
+                    console.log(`Termi wins! ${computerResult} beats ${humanResult}`);
                     computerScore ++;
                 } else {
-                    console.log("Human wins!");
+                    console.log(`Human wins! ${humanResult} beats ${computerResult}`);
                     humanScore ++;
                 }
             }
